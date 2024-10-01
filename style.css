@@ -23,9 +23,16 @@ body {
   margin: auto;
 }
 
+/* h1 {
+  font-size: 24px;
+  color: #48d1ff;
+  margin-bottom: 20px;
+} */
 h1 {
   font-size: 24px;
-  color: rgb(17, 117, 144);
+  background: linear-gradient(to right, #3494e6, #ec6ead); /* Apply gradient */
+  background-clip: text; /* For other browsers */
+  color: transparent; /* Fallback for unsupported browsers */
   margin-bottom: 20px;
 }
 
@@ -50,18 +57,18 @@ input {
   border-color: #ff4848;
 }
 
-button {
+/* button {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background: #ff4848;
-  color: #fff;
-}
+  background: #48f9ff;
+  color: #ff0606;
+} */
 
 #searchBtn:hover {
-  background: #ff6565;
+  background: #65fff0;
 }
 
 .recipe-container {
@@ -185,12 +192,12 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background: #ff4848;
+  background: linear-gradient(to right, #3494e6, #ec6ead);
   color: #fff;
 }
 
 #searchBtn:hover {
-  background: #ff6565;
+  background: linear-gradient(to left, #3494e6, #ec6ead);
 }
 
 .recipe-container {
@@ -206,7 +213,8 @@ button {
   background: linear-gradient(to right, #a0f8a4, rgb(160, 212, 255), 90%, 54%);
   border-radius: 20px;
   padding: 8px;
-  box-shadow: 0 2px 5px rgb(255, 3, 3);
+  /* box-shadow: 0 2px 5px #48d7ff; */
+  box-shadow: 0 2px 5px #3494e6;
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
   text-align: center;
@@ -235,7 +243,7 @@ button {
 }
 
 .show-recipe-btn {
-  background: #ff4848;
+  background: linear-gradient(to right, #3494e6, #ec6ead);
   color: #fff;
   padding: 8px;
   border: none;
@@ -245,7 +253,7 @@ button {
 }
 
 .show-recipe-btn:hover {
-  background: #ff6565;
+  background: linear-gradient(to left, #3494e6, #ec6ead);
 }
 
 .modal {
