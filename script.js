@@ -1,16 +1,17 @@
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
-function defaultFn() {
-  const defaultFood = "chicken";
-  searchFn(defaultFood);
-}
+// function defaultFn() {
+//   const defaultFood = "chicken";
+//   searchFn(defaultFood);
+// }
+const searchBtn = document.querySelector("#searchBtn");
 
-document.getElementById("searchBtn").addEventListener("click", () => {
+searchBtn.addEventListener("click", () => {
   const userIn = document.getElementById("searchInput").value.trim();
   if (userIn !== "") {
     searchFn(userIn);
   } else {
-    alert("Please enter a recipe name.");
+    alert("Please enter a recipe name 😉!");
   }
 });
 
@@ -24,7 +25,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
-defaultFn();
+// defaultFn();
 
 async function searchFn(query) {
   try {
@@ -42,9 +43,11 @@ async function searchFn(query) {
   }
 }
 
+// Function decleration type
 function showRecpsFn(r) {
-  const rCont = document.getElementById("recipeContainer");
-  rCont.innerHTML = "";
+  const recipeContainer1 = document.getElementById("recipeContainer");
+  recipeContainer1.innerHTML = "";
+  // The slice method will take first 20 recipe from the array and then loops them !
   r.slice(0, 20).forEach((recipe) => {
     const c = document.createElement("div");
     c.classList.add("animate__animated", "animate__fadeIn", "recipe-card");
@@ -55,17 +58,17 @@ function showRecpsFn(r) {
       <p>${recipe.strCategory}</p>
       <button class="show-recipe-btn" data-id="${recipe.idMeal}">Show Recipe</button>
     `;
-    rCont.appendChild(c);
+    recipeContainer1.appendChild(c);
   });
   if (r.length === 1) {
-    const card = rCont.firstChild;
+    const card = recipeContainer1.firstChild;
     card.style.margin = "auto";
   }
 }
 
 function noRecFn() {
-  const rCont = document.getElementById("recipeContainer");
-  rCont.innerHTML = "<p>No Recipe found</p>";
+  const recipeContainer1 = document.getElementById("recipeContainer");
+  recipeContainer1.innerHTML = "<p>No Recipe found</p>";
 }
 
 async function modalFn(recipeId) {
@@ -100,3 +103,15 @@ function formatFn(instructions) {
 function closeModalFn() {
   document.getElementById("recipeModal").style.display = "none";
 }
+
+// c.classList.add("animate__animated", "animate__fadeIn", "recipe-card");
+
+// 1) animate__animated
+// This class is part of the Animate.css library.
+// When this class is applied to an element, it allows you to use additional animation classes to create effects like fading, sliding, bouncing, etc.
+
+// animate__fadeIn
+// In this case, fadeIn means that the element will smoothly transition from being invisible to fully visible.
+
+//recipe-card
+// This is likely a custom class defined in your CSS (not part of Animate.css) that styles the recipe card element. The styles associated with this class could include properties like background color, padding, border radius, and other layout settings to make it visually appealing.

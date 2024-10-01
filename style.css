@@ -14,12 +14,12 @@ body {
 .container {
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
   overflow: hidden;
   text-align: center;
-  max-width: 1700px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -121,10 +121,11 @@ input {
   cursor: pointer;
   margin-top: 10px;
 }
+*/
 
-.show-recipe-btn:hover {
+/* /* .show-recipe-btn:hover {
   background: #ff6565;
-}
+} */
 
 .modal {
   display: none;
@@ -242,6 +243,20 @@ button {
   margin-bottom: 10px;
 }
 
+/* .show-recipe-btn {
+  background: linear-gradient(to right, #3494e6, #ec6ead);
+  transition: background 3s ease;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.show-recipe-btn:hover {
+  background: linear-gradient(to left, #3494e6, #ec6ead);
+} */
 .show-recipe-btn {
   background: linear-gradient(to right, #3494e6, #ec6ead);
   color: #fff;
